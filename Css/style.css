@@ -1,0 +1,213 @@
+:root {
+  --primary-color: #007bff;
+  --secondary-color: #6c757d;
+  --background-color: #f8f9fa;
+  --text-color: #333;
+  --link-color: #007bff;
+  --link-hover-color: #0056b3;
+  --header-background-color: #007bff;
+  --header-text-color: white;
+  --button-background-color: #007bff;
+  --button-hover-color: #0056b3;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+header {
+  background-color: var(--header-background-color);
+  color: var(--header-text-color);
+  padding: 1.5rem 0;
+  text-align: center;
+  position: relative;
+}
+
+header::after {
+  content: "";
+  position: absolute;
+  bottom: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 5px;
+  background-color: var(--header-text-color);
+}
+
+.navbar-light .navbar-nav .nav-link {
+  color: var(link-hover-color);
+  font-weight: bold;
+}
+
+.navbar-light .navbar-nav .nav-link:hover {
+  color: var(--link-hover-color);
+}
+
+
+body.dark-mode {
+  background-color: #121212;
+  color: #e0e0e0;
+}
+
+header.dark-mode {
+  background-color: #1e1e1e;
+}
+
+nav.dark-mode {
+  background-color: #1e1e1e;
+}
+
+footer.dark-mode {
+  background-color: #1e1e1e;
+}
+
+.card.dark-mode {
+  background-color: #2e2e2e;
+  color: #e0e0e0;
+}
+
+
+.btn-dark-mode {
+  background-color: #333;
+  color: #e0e0e0;
+}
+
+
+
+.button-container {
+  position: fixed;
+  top: 20px; 
+  right: 20px; 
+  display: flex;
+  flex-direction: column; 
+  gap: 10px; 
+}
+
+
+.button-container .btn {
+  background-color: #007bff; 
+  color: white; 
+  border: none; 
+  border-radius: 5px; 
+  padding: 10px 15px; 
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer; 
+}
+
+/* Dark Mode Toggle Button Specific */
+#dark-mode-toggle {
+  background-color: #343a40; /* Background color for dark mode button */
+}
+
+#dark-mode-toggle:hover {
+  background-color: #495057; /* Darker color on hover */
+}
+
+.card {
+  background-color: white;
+  border: none;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+  color: var(--primary-color);
+  font-size: 1.5rem;
+}
+
+
+#back-to-top {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  width: 50px;
+  height: 50px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1000; /* للتأكد من ظهوره فوق عناصر أخرى */
+  display: none; /* إخفاء الزر بشكل افتراضي، يمكنك إظهاره عند الحاجة */
+}
+
+#back-to-top i {
+  font-size: 20px;
+}
+
+#back-to-top:hover {
+  background-color: #0056b3; /* لون أزرق أغمق عند التمرير */
+}
+
+/* Contact Form */
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: var(--link-hover-color);
+}
+footer .contact-form {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+footer .contact-form h4 {
+  margin-bottom: 1rem;
+  color: var(--primary-color);
+}
+
+footer .contact-form input,
+footer .contact-form textarea {
+  width: 100%;
+  padding: 0.75rem;
+  margin-bottom: 1rem;
+  border: 1px solid var(--secondary-color);
+  border-radius: 4px;
+}
+
+footer .contact-form input[type="submit"] {
+  background-color: var(--button-background-color);
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+footer .contact-form input[type="submit"]:hover {
+  background-color: var(--button-hover-color);
+}
+
+
+.my-custom-img {
+  width: 100%; 
+  height: auto; 
+  margin-top: 20px; 
+}
